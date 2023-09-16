@@ -1,0 +1,100 @@
+[css-animation~='floating']{animation: floating 12s ease infinite;}
+
+@keyframes floating
+{
+    0%
+    {
+        transform: translate(0, 0);
+    }
+    50%
+    {
+        transform: translate(0, 20px);
+    }
+    100%
+    {
+        transform: translate(0, 0);
+    }
+    
+}
+
+@keyframes pulse
+{
+    0%
+    {
+        scale: 1;
+    }
+    25%
+    {
+        scale: 1.1;
+    }
+    50%
+    {
+        scale: 1.2
+    }
+    75%
+    {
+        scale: 1.1;
+    }
+    100%
+    {
+        scale: 1;
+    }
+}
+
+path.logo_svg_hair_top {transition: all .6s ease;} 
+path.logo_svg_hair_middle {transition: all .9s ease;} 
+path.logo_svg_hair_bottom {transition: all 1.2s ease;}
+path.logo_svg_shadow_arm {transition: all 1.8s ease;}
+path.logo_svg_shadow_tale {transition: all 1.8s ease;}
+path.logo_svg_body {transition: all 1.8s ease;}
+
+svg:hover path.logo_svg_hair_top, 
+svg:hover path.logo_svg_hair_middle, 
+svg:hover path.logo_svg_hair_bottom,
+svg:hover path.logo_svg_shadow_arm,
+svg:hover path.logo_svg_shadow_tale,
+svg:hover path.logo_svg_body
+{
+    transform: translate(0, -10px);
+}
+
+@keyframes draw
+{
+    0%
+    {
+        stroke-dashoffset: var(--value);
+        stroke-dasharray: var(--value);
+    }
+    100%
+    {
+        stroke-dashoffset: 0; 
+    }
+}
+
+.header_club_name_container > span, .header_club_name_sub
+{
+    transition: all .3s ease;
+}
+
+.header_club_name_container > span:hover
+{
+    text-shadow: 0 0 10px var(--background-counter);
+    color: var(--text-counter);
+}
+
+.hoverable_box:hover
+{
+    box-shadow: 0 0 10px var(--accent),
+                0 0 30px var(--accent),
+                0 0 80px var(--accent);
+}
+
+.hoverable_text
+{
+    transition: all 0.3s ease;
+}
+
+.hoverable_text:hover
+{
+    color: var(--accent);
+}

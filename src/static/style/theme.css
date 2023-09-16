@@ -1,0 +1,21 @@
+[css-color~='background']{background-color: var(--background);}
+[css-color~='background_counter']{background-color: var(--background-counter);}
+[css-color~='primary']{background-color: var(--primary);}
+[css-color~='secondary']{background-color: var(--secondary);}
+[css-color~='accent']{background-color: var(--accent);}
+
+[css-color~='text']{color: var(--text);}
+[css-color~='text_counter']{color: var(--text-counter);}
+[css-color~='text_primary']{color: var(--text-primary);}
+[css-color~='text_secondary']{color: var(--text-secondary);}
+[css-color~='text_accent']{color: var(--text-accent);}
+
+[css-color~='background_darkmode']{background-color: var(--background-darkmode);}
+[css-color~='primary_darkmode']{background-color: var(--primary-darkmode);}
+[css-color~='secondary_darkmode']{background-color: var(--secondary-darkmode);}
+[css-color~='accent_darkmode']{background-color: var(--accent-darkmode);}
+
+[css-color~='text_darkmode']{color: var(--text-darkmode);}
+[css-color~='text_primary_darkmode']{color: var(--text-primary-darkmode);}
+[css-color~='text_secondary_darkmode']{color: var(--text-secondary-darkmode);}
+[css-color~='text_accent_darkmode']{color: var(--text-accent-darkmode);}
