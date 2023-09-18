@@ -2,8 +2,8 @@ function getCarousel()
 {
     const path_to_images = 
     [
-        './../src/static/img/banner/reference_1.jpg',
-        './../src/static/img/banner/a_kto_tut_u_nas.jpg',
+        './../src/static/img/reference_1.jpg',
+        './../src/static/img/a_kto_tut_u_nas.jpg',
     ];
     let slides = '';
     for (let i = 0; i < path_to_images.length; i++)
@@ -15,6 +15,7 @@ function getCarousel()
                 ${is_active}
             >
                 <div
+                    referrerPolicy="no-referrer"
                     style="background-image: url(${path_to_images[i]});"
                 ></div>
             </li>
