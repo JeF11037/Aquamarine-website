@@ -30,33 +30,12 @@ function loadPage(language, content)
     Promise.all(promises)
     .then(function() 
     {
-        document.body.innerHTML += `
-        <div class="cursor"></div>
-        <header
-            css-flex='vertical'
-            css-width='100_%'
-            css-position='absolute'
-            css-z-index=''
-            css-gradient='fade_black'
-        ></header>
-        <main
-            css-flex='vertical'
-            css-width='100_%'
-            css-color='background'
-        ></main>
-        <footer
-            css-flex='vertical'
-            css-width='100_%'
-            css-height='20_rem'
-            css-color='background_counter'
-            css-separator-shadow=''
-        ></footer>
-        `;
+        document.body.innerHTML += getPageTemplate();
         document.querySelector("header").innerHTML = getHeaderTemplate(language);
         document.querySelector("main").innerHTML = content_pages[content](language);
         document.querySelector("footer").innerHTML = getFooterTemplate(language);
         activateCursor();
-        activateBackground();
+        buildSlider();
     }).catch(function(script)
     {
         console.log(script + 'failed to load');

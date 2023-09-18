@@ -71,7 +71,8 @@ svg:hover path.logo_svg_body
     }
 }
 
-.header_club_name_container > span, .header_club_name_sub
+.header_club_name_container > span, 
+.header_club_name_sub
 {
     transition: all .3s ease;
 }
@@ -82,19 +83,17 @@ svg:hover path.logo_svg_body
     color: var(--text-counter);
 }
 
-.hoverable_box:hover
+[css-hoverable~='box'],
+[css-hoverable~='text'],
+[css-hoverable~='icon'] svg
+{transition: all 0.3s ease;}
+
+[css-hoverable~='box']:hover
 {
-    box-shadow: 0 0 10px var(--accent),
-                0 0 30px var(--accent),
-                0 0 80px var(--accent);
+    box-shadow: 0 0 5px var(--accent),
+                0 0 15px var(--accent),
+                0 0 40px var(--accent);
 }
 
-.hoverable_text
-{
-    transition: all 0.3s ease;
-}
-
-.hoverable_text:hover
-{
-    color: var(--accent);
-}
+[css-hoverable~='text']:hover {color: var(--accent);}
+[css-hoverable~='icon']:hover svg {fill: var(--accent);}

@@ -19,3 +19,5 @@
 [css-color~='text_primary_darkmode']{color: var(--text-primary-darkmode);}
 [css-color~='text_secondary_darkmode']{color: var(--text-secondary-darkmode);}
 [css-color~='text_accent_darkmode']{color: var(--text-accent-darkmode);}
+
+[css-color~='fill_text_counter']{fill: var(--text-counter);}

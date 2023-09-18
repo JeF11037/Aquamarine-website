@@ -1,7 +1,7 @@
 function getTrainingContent(language)
 {
     return `
-        <div class='content training'>
+        <div class='content'>
         </div>
     `
 }
