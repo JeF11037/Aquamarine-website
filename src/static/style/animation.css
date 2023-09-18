@@ -58,6 +58,24 @@ svg:hover path.logo_svg_body
     transform: translate(0, -10px);
 }
 
+@media(hover: none) and (pointer: coarse){
+    svg:active path.logo_svg_hair_top, 
+    svg:active path.logo_svg_hair_middle, 
+    svg:active path.logo_svg_hair_bottom,
+    svg:active path.logo_svg_shadow_arm,
+    svg:active path.logo_svg_shadow_tale,
+    svg:active path.logo_svg_body
+    {
+        transform: translate(0, -10px);
+    }
+
+    .header_club_name_container > span:active
+    {
+        text-shadow: 0 0 10px var(--background-counter);
+        color: var(--text-counter);
+    }
+}
+
 @keyframes draw
 {
     0%

@@ -114,8 +114,9 @@ function getFooterTemplate(language)
             class='footer_container'
         >
             <div
-                css-flex='align_items_center justify_content_space_evenly'
+                css-flex='align_items_center justify_content_space_evenly gap_1_rem'
                 css-width='100_%'
+                css-mobile-1200='column'
             >
                 <div
                     css-flex='vertical gap_2_rem justify_content_space_between'
@@ -128,6 +129,7 @@ function getFooterTemplate(language)
                         <h3
                             css-text='uppercase center bold 24_px'
                             css-border='bottom_5_px bottom_solid bottom_light bottom_radius_5_px'
+                            css-width='100_%'
                         >
                             useful links
                         </h3>
@@ -143,6 +145,7 @@ function getFooterTemplate(language)
                         <h3
                             css-text='uppercase center bold 24_px'
                             css-border='bottom_5_px bottom_solid bottom_light bottom_radius_5_px'
+                            css-width='100_%'
                         >
                             contact us
                         </h3>
@@ -154,13 +157,14 @@ function getFooterTemplate(language)
                     </div>
                 </div>
                 <div
-                    css-flex='vertical gap_1_rem'
+                    css-flex='vertical align_items_center gap_1_rem'
                     css-height='100_%'
                     css-color='text_counter'
                 >
                     <h3
                         css-text='uppercase center bold 24_px'
                         css-border='bottom_5_px bottom_solid bottom_light bottom_radius_5_px'
+                        css-width='100_%'
                     >
                         our location
                     </h3>
@@ -193,12 +197,14 @@ function getFooterTemplate(language)
                     <h3
                         css-text='uppercase center bold 24_px'
                         css-border='bottom_5_px bottom_solid bottom_light bottom_radius_5_px'
+                        css-width='100_%'
                     >
                         follow us on social media
                     </h3>
                     <ul
                         css-list=''
                         css-flex='justify_content_center align_items_center gap_1_rem'
+                        css-mobile-1450='flex_column'
                     >
                         ${media_options}
                     </ul>

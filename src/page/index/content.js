@@ -34,7 +34,7 @@ function getIndexContent(language)
             ${getCarousel()}
         </div>
         <div
-            css-height='100_vh'
+            css-height='fit_content'
             css-color='primary'
             id="content2"
         >
@@ -49,6 +49,7 @@ function getIndexContent(language)
                     <h1
                         css-color='text'
                         css-text='poppins uppercase 60_px bold uppercase'
+                        css-mobile-700='h1'
                     >
                         Lorem ipsum dolor sit amet
                     </h1>
@@ -56,6 +57,7 @@ function getIndexContent(language)
                         css-color='text'
                         css-text='poppins uppercase 20_px capitalize'
                         css-opacity='0_8'
+                        css-mobile-700='p'
                     >
                         consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>

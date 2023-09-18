@@ -54,6 +54,7 @@
 [css-width~='40_rem']{width: 40rem;}
 [css-width~='80_rem']{width: 80rem;}
 
+[css-height~='fit_content']{height: fit-content;}
 [css-height~='100_%']{height: 100%;}
 [css-height~='90_%']{height: 90%;}
 [css-height~='80_%']{height: 80%;}
