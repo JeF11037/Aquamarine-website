@@ -1,18 +1,11 @@
 [css-z-index]{z-index: 9;}
 
-[css-flex~='content']{width: 80%;margin: 0 auto;}
+[css-flex~='content']{width: 80%;margin: 0 auto;overflow: hidden;}
 
 
 [css-gradient~='shadow']
 {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, .3) 80%, rgba(0, 0, 0, 0) 100%);    
-}
-
-[css-gradient~='background']
-{
-    background-image: url('./../img/banner/a_kto_tut_u_nas.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .cursor_circle_trail 
@@ -38,6 +31,8 @@
     z-index: 1000;
     animation: pulse 1s ease infinite;
 }
+
+/* !!! IMPORTANT | Need to refactor code below  */
 
 .temp_grid
 {
@@ -77,3 +72,348 @@
     height: 10rem;
     fill: white;
 }
+
+.temp_car
+{
+    background-attachment: fixed;
+}
+
+.temp_car::before
+{
+    content:"";
+    position:absolute;
+    height:100%;
+    width:100%;
+    left:0;
+    top:0;
+    background-color:rgba(0,0,0,.4);
+    z-index:1
+}
+
+.temp_media
+{
+    position: absolute;
+    right: 5rem;
+}
+
+.temp_arrow
+{
+    position: absolute;
+    z-index: 9;
+    left: 50%;
+    bottom: 2rem;
+    fill: white;
+    border-radius: 5px;
+    padding: 0 .5rem;
+    background-color: transparent;
+}
+
+.temp_arrow svg
+{
+    animation: floating_10_px 2s ease-in-out infinite;
+    transition: transform .3s ease;
+}
+
+.temp_arrow:hover
+{
+    outline: 1px solid white;
+}
+
+/* Cards starts ------------------------------------------------------------------------------------------------------- */
+
+[data-cards]
+{
+    display: flex;
+    gap: 2rem;
+}
+
+[data-card]
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 20rem;
+    height: 25rem;
+    background-color: var(--primary);
+    border-radius: 5px;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .3s ease;
+}
+
+[data-card]:hover
+{
+    transform: scale(1.05);
+}
+
+[data-card-content]
+{
+    transform: translateY(70%);
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, .6) 0%,
+        rgba(0, 0, 0, .4) 20%,
+        rgba(0, 0, 0, .4) 80%,
+        rgba(0, 0, 0, 0) 100%
+        );
+    padding: 1rem;
+    transition: all .3s ease;
+}
+
+[data-card] h2
+{
+    color: var(--secondary);
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "poppins", sans-serif;
+    margin-bottom: 3rem;
+    transition: all .3s ease;
+    text-align: center;
+}
+
+[data-card-bottom]
+{
+    display: flex;
+    flex-direction: column;
+}
+
+[data-card-bottom] span
+{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    color: var(--secondary);
+    text-transform: capitalize;
+    font-size: 14px;
+    font-family: "poppins", sans-serif;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+}
+
+[data-card-bottom] a
+{
+    background-color: var(--accent);
+    text-align: center;
+    padding: .5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+[data-card-bottom] a span
+{
+    width: fit-content;
+    color: var(--text-secondary);
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-family: "poppins", sans-serif;
+    margin: 0;
+    transform: translateX(10px);
+    transition: all ease .3s;
+}
+
+[data-card-bottom] a svg
+{
+    opacity: 0;
+    transition: all ease .3s;
+}
+
+[data-card-bottom] a:hover span
+{
+    transform: translateX(0);
+}
+
+[data-card-bottom] a:hover svg
+{
+    opacity: 1;
+}
+
+[data-card]:hover [data-card-content]
+{
+    transform: translateY(0);
+}
+
+[data-card]:hover h2
+{
+    margin-bottom: 1rem;
+}
+
+/* Cards end ------------------------------------------------------------------------------------------------------- */
+
+/* Trainer end ------------------------------------------------------------------------------------------------------- */
+
+[data-trainers]
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+[data-trainer]
+{
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    height: fit-content;
+    padding: 2rem;
+    margin-top: 10rem;
+}
+
+[data-trainer-img]
+{
+    display: flex;
+    position: relative;
+    width: 19rem;
+    height: 15rem;
+    background-color: var(--primary);
+    transition: all ease-in-out .3s;
+}
+
+[data-trainer-img] > img
+{
+    display: flex;
+    position: absolute;
+    inset: 0;
+    width: 16rem;
+    height: 24rem;
+    transform: translateY(-9rem);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    background-color: transparent;
+    transition: all ease-in-out .3s;
+}
+
+[data-trainer-img] > img[data-trainer-img='alter']
+{
+    opacity: 0;
+}
+
+
+[data-trainer]:hover img[data-trainer-img='main']
+{
+    opacity: 0;
+}
+
+[data-trainer]:hover img[data-trainer-img='alter']
+{
+    opacity: 1;
+}
+
+[data-trainer-info]
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+[data-trainer-info] > h2
+{
+    color: var(--text);
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 24px;
+    font-family: "poppins", sans-serif;
+    margin-top: 1rem;
+}
+
+[data-trainer-info] > h3
+{
+    color: var(--primary);
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-family: "poppins", sans-serif;
+}
+
+[data-trainer-info] > p
+{
+    color: var(--text);
+    opacity: .8;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-family: "poppins", sans-serif;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+[data-trainer-links]
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+[data-trainer-links] > a
+{
+    color: var(--accent);
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-family: "poppins", sans-serif;
+}
+
+/* Trainer end ------------------------------------------------------------------------------------------------------- */
+
+/* Pool starts ------------------------------------------------------------------------------------------------------- */
+
+[data-pool-map]
+{
+    height: 100%;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+[data-pool-map] > div
+{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 100%;
+    font-family: "poppins", sans-serif;
+    color: var(--text);
+    padding: 1rem;
+
+}
+
+[data-pool-map] > div > h1
+{
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+[data-pool-map] > div > ul li
+{
+    font-size: 22px;
+}
+
+[data-pool-map] > iframe
+{
+    display: flex;
+    width: 800px;
+    height: 800px;
+}
+
+[data-pool-active]
+{
+    color: var(--accent);
+    margin-left: .5rem;
+}
+
+/* Pool end ------------------------------------------------------------------------------------------------------- */

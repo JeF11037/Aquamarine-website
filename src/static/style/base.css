@@ -1,4 +1,4 @@
-[css-flex]{display: flex; flex-shrink: 0;}
+[css-flex]{display: flex;}
 [css-flex~='vertical']{flex-direction: column;}
 [css-flex~='justify_content_center']{justify-content: center;}
 [css-flex~='justify_content_baseline']{justify-content: baseline;}
@@ -31,10 +31,13 @@
 [css-width~='30_%']{width: 30%;}
 [css-width~='20_%']{width: 20%;}
 [css-width~='10_%']{width: 10%;}
-[css-width~='100_vw']{width: 100vw; max-width: 100%;}
+[css-width~='20_px']{width: 20px;}
+[css-width~='25_px']{width: 25px}
+[css-width~='30_px']{width: 30px}
 [css-width~='2_rem']{width: 2rem;}
 [css-width~='3_rem']{width: 3rem;}
 [css-width~='4_rem']{width: 4rem;}
+[css-width~='5_rem']{width: 5rem;}
 [css-width~='6_rem']{width: 6rem;}
 [css-width~='8_rem']{width: 8rem;}
 [css-width~='10_rem']{width: 10rem;}
@@ -65,8 +68,13 @@
 [css-height~='30_%']{height: 30%;}
 [css-height~='20_%']{height: 20%;}
 [css-height~='10_%']{height: 10%;}
-[css-height~='100_vh']{height: 100vh;}
+[css-height~='100_vh']{min-height: 100vh; height: fit-content;}
+[css-height~='90_vh']{min-height: 90vh; height: fit-content;}
+[css-height~='80_vh']{min-height: 80vh; height: fit-content;}
 [css-height~='5_px']{height: 5px;}
+[css-height~='20_px']{height: 20px;}
+[css-height~='25_px']{height: 25px;}
+[css-height~='30_px']{height: 30px;}
 [css-height~='1_rem']{height: 1rem;}
 [css-height~='2_rem']{height: 2rem;}
 [css-height~='3_rem']{height: 3rem;}
@@ -194,6 +202,7 @@
 [css-text~='acme']{font-family: "Acme", sans-serif;}
 [css-text~='karla']{font-family: "Karla", sans-serif;}
 [css-text~='capitalize']{text-transform: capitalize;}
+[css-text~='capitalize_first_letter']::first-letter{text-transform: capitalize;}
 [css-text~='uppercase']{text-transform: uppercase;}
 [css-text~='lowercase']{text-transform: lowercase;}
 [css-text~='300']{font-weight: 300;}

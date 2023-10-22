@@ -2,28 +2,17 @@
 {
     --background: #bbe4e9;
     --background-counter: #191D88;
-    --primary: #337CCF;
+    --background-counter-alter: #1f2f63;
+    --primary: #30c4ea;
     --secondary: #fafcfe;
+    --secondary-alter: #fafcfecc;
     --accent: #9c6d00;
     
     --text: #191D88;
     --text-counter: #bbe4e9;
-    --text-primary: #337CCF;
+    --text-primary: #30c4ea;
     --text-secondary: #fafcfe;
     --text-accent: #9c6d00;
-
-    /* Colors for darkmode */
-
-    --background-darkmode: #191D88;
-    --background-counter-darkmode: #bbe4e9;
-    --primary-darkmode: #337CCF;
-    --secondary-darkmode: #103050;
-    --accent-darkmode: #ffc336;
-
-    --text-darkmode: #bbe4e9;
-    --text-primary-darkmode: #191D88;
-    --text-secondary-darkmode: #103050;
-    --text-accent-darkmode: #ffc336;
 
     --value: 975;
 }

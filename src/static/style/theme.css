@@ -1,7 +1,9 @@
 [css-color~='background']{background-color: var(--background);}
 [css-color~='background_counter']{background-color: var(--background-counter);}
+[css-color~='background_counter_alter']{background-color: var(--background-counter-alter)}
 [css-color~='primary']{background-color: var(--primary);}
 [css-color~='secondary']{background-color: var(--secondary);}
+[css-color~='secondary_alter']{background-color: var(--secondary-alter);}
 [css-color~='accent']{background-color: var(--accent);}
 
 [css-color~='text']{color: var(--text);}
@@ -21,3 +23,4 @@
 [css-color~='text_accent_darkmode']{color: var(--text-accent-darkmode);}
 
 [css-color~='fill_text_counter']{fill: var(--text-counter);}
+[css-color~='fill_text_secondary']{fill: var(--text-secondary);}

@@ -1,6 +1,4 @@
-[css-animation~='floating']{animation: floating 12s ease infinite;}
-
-@keyframes floating
+@keyframes floating_10_px
 {
     0%
     {
@@ -8,7 +6,7 @@
     }
     50%
     {
-        transform: translate(0, 20px);
+        transform: translate(0, 10px);
     }
     100%
     {
@@ -48,23 +46,23 @@ path.logo_svg_shadow_arm {transition: all 1.8s ease;}
 path.logo_svg_shadow_tale {transition: all 1.8s ease;}
 path.logo_svg_body {transition: all 1.8s ease;}
 
-svg:hover path.logo_svg_hair_top, 
-svg:hover path.logo_svg_hair_middle, 
-svg:hover path.logo_svg_hair_bottom,
-svg:hover path.logo_svg_shadow_arm,
-svg:hover path.logo_svg_shadow_tale,
-svg:hover path.logo_svg_body
+svg[data-animation='true']:hover path.logo_svg_hair_top, 
+svg[data-animation='true']:hover path.logo_svg_hair_middle, 
+svg[data-animation='true']:hover path.logo_svg_hair_bottom,
+svg[data-animation='true']:hover path.logo_svg_shadow_arm,
+svg[data-animation='true']:hover path.logo_svg_shadow_tale,
+svg[data-animation='true']:hover path.logo_svg_body
 {
     transform: translate(0, -10px);
 }
 
 @media(hover: none) and (pointer: coarse){
-    svg:active path.logo_svg_hair_top, 
-    svg:active path.logo_svg_hair_middle, 
-    svg:active path.logo_svg_hair_bottom,
-    svg:active path.logo_svg_shadow_arm,
-    svg:active path.logo_svg_shadow_tale,
-    svg:active path.logo_svg_body
+    svg[data-animation='true']:active path.logo_svg_hair_top, 
+    svg[data-animation='true']:active path.logo_svg_hair_middle, 
+    svg[data-animation='true']:active path.logo_svg_hair_bottom,
+    svg[data-animation='true']:active path.logo_svg_shadow_arm,
+    svg[data-animation='true']:active path.logo_svg_shadow_tale,
+    svg[data-animation='true']:active path.logo_svg_body
     {
         transform: translate(0, -10px);
     }
@@ -103,7 +101,9 @@ svg:hover path.logo_svg_body
 
 [css-hoverable~='box'],
 [css-hoverable~='text'],
-[css-hoverable~='icon'] svg
+[css-hoverable~='icon'] svg,
+[css-hoverable~='text_with_icon'],
+[css-hoverable~='text_with_icon'] svg
 {transition: all 0.3s ease;}
 
 [css-hoverable~='box']:hover
@@ -114,4 +114,6 @@ svg:hover path.logo_svg_body
 }
 
 [css-hoverable~='text']:hover {color: var(--accent);}
+[css-hoverable~='text_with_icon']:hover {color: var(--accent);}
+[css-hoverable~='text_with_icon']:hover > svg {fill: var(--accent);}
 [css-hoverable~='icon']:hover svg {fill: var(--accent);}

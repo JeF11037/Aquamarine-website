@@ -35,7 +35,6 @@ function getFooterTemplate(language)
         [``, '#', `Some link`],
         [``, '#', `Some link`],
         [``, '#', `Some link`],
-        [``, '#', `Some link`],
     ];
 
     let media_options = '';
@@ -63,7 +62,7 @@ function getFooterTemplate(language)
         contact_options += `
             <p
                 css-flex='align_items_center gap_1_rem'
-                css-text='capitalize 22_px'
+                css-text='22_px poppins'
                 css-opacity='0_8'
             >
                 ${contact[0]}
@@ -75,19 +74,16 @@ function getFooterTemplate(language)
     let top_links_options = '';
     top_links.forEach(link => {
         top_links_options += `
-        <p
+        <a 
+            href=${link[0]}
             css-flex='align_items_center gap_1_rem'
-            css-text='capitalize 22_px'
+            css-text='capitalize 22_px poppins'
             css-opacity='0_8'
-        >
-            <a 
-                href=${link[0]}
-                css-hoverable='text'
-                css-opacity='0_8 normal_on_hover'
-                onmouseover='mouseOver()'
-                onmouseout='mouseOut()'
-            >${link[1]}</a>
-        </p>
+            css-hoverable='text'
+            css-opacity='0_8 normal_on_hover'
+            onmouseover='mouseOver()'
+            onmouseout='mouseOut()'
+        >${link[1]}</a>
         `;
     });
 
@@ -98,6 +94,7 @@ function getFooterTemplate(language)
                 ${link[0]}
                 <a 
                     href=${link[1]}
+                    css-text='poppins'
                     css-hoverable='text'
                     css-opacity='0_8 normal_on_hover'
                     onmouseover='mouseOver()'
@@ -114,12 +111,57 @@ function getFooterTemplate(language)
             class='footer_container'
         >
             <div
-                css-flex='align_items_center justify_content_space_evenly gap_1_rem'
+                css-flex='justify_content_space_evenly gap_1_rem'
                 css-width='100_%'
                 css-mobile-1200='column'
             >
                 <div
-                    css-flex='vertical gap_2_rem justify_content_space_between'
+                    css-flex='vertical gap_1_rem'
+                    css-height='100_%'
+                >
+                    <span
+                        css-text='uppercase center bold 22_px poppins'
+                        css-width='100_%'
+                        css-color='text_counter'
+                    >
+                        <a
+                            href='https://maps.app.goo.gl/nxVxxWvjo25X6LDS9'
+                            target='_blank'
+                            css-flex='align_items_center'
+                            css-hoverable='text_with_icon'
+                            css-text='poppins'
+                            onmouseover='mouseOver()'
+                            onmouseout='mouseOut()'
+                        >
+                            ${getIcon('location', ['fill_text_counter', '2_rem', '2_rem'])}
+                            юридический адрес
+                        </a>
+                    </span>
+                    <div
+                        css-flex='vertical gap_1_rem'
+                        css-height='100_%'
+                        css-color='text_counter'
+                        css-text='capitalize 22_px poppins'
+                        css-opacity='0_8'
+                    >
+                        <span>Punane tee 6-12</span>
+                        <span>Tallinn, Harjumaa</span>
+                        <span>12345</span>
+                    </div>
+                </div>
+                <div
+                    css-flex='vertical gap_1_rem'
+                    css-height='100_%'
+                    css-color='text_counter'
+                >
+                    <div
+                        class='temp_grid'
+                    >
+                        ${top_links_options}
+                    </div>
+                </div>
+                <div
+                    css-flex='vertical gap_3_rem'
                     css-height='100_%'
                     css-color='text_counter'
                 >
@@ -127,27 +169,11 @@ function getFooterTemplate(language)
                         css-flex='vertical gap_1_rem'
                     >
                         <h3
-                            css-text='uppercase center bold 24_px'
+                            css-text='uppercase center bold 24_px poppins'
                             css-border='bottom_5_px bottom_solid bottom_light bottom_radius_5_px'
                             css-width='100_%'
                         >
-                            useful links
-                        </h3>
-                        <div
-                            class='temp_grid'
-                        >
-                            ${top_links_options}
-                        </div>
-                    </div>
-                    <div
-                        css-flex='vertical gap_1_rem'
-                    >
-                        <h3
-                            css-text='uppercase center bold 24_px'
-                            css-border='bottom_5_px bottom_solid bottom_light bottom_radius_5_px'
-                            css-width='100_%'
-                        >
-                            contact us
+                            свяжитесь с нами
                         </h3>
                         <div
                             class='temp_grid'
@@ -155,59 +181,24 @@ function getFooterTemplate(language)
                             ${contact_options}
                         </div>
                     </div>
-                </div>
-                <div
-                    css-flex='vertical align_items_center gap_1_rem'
-                    css-height='100_%'
-                    css-color='text_counter'
-                >
-                    <h3
-                        css-text='uppercase center bold 24_px'
-                        css-border='bottom_5_px bottom_solid bottom_light bottom_radius_5_px'
-                        css-width='100_%'
+                    <div
+                        css-flex='vertical gap_1_rem'
                     >
-                        our location
-                    </h3>
-                    <p
-                        css-flex='align_items_center gap_1_rem'
-                        css-text='capitalize 22_px'
-                        css-opacity='0_8'
-                        css-hoverable='text'
-                    >
-                        ${getIcon('location', ['fill_text_counter', '2_rem', '2_rem'])}
-                        <a
-                            onmouseover='mouseOver()'
-                            onmouseout='mouseOut()'
-                            href='https://maps.app.goo.gl/S6hWNvU7L1vP2xar5'
-                            target="_blank"
-                        >Somewhere over the rainbow</a>
-                    </p>
-                    <iframe
-                        css-border='radius_5_px'
-                        onmouseover='mouseOver()'
-                        onmouseout='mouseOut()'
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4828.373120060286!2d24.80747753897053!3d59.4150425121932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2see!4v1694884803499!5m2!1sru!2see" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                    ></iframe>
-                </div>
-                <div
-                    css-flex='vertical align_items_center gap_1_rem'
-                    css-height='100_%'
-                    css-color='text_counter'
-                >
-                    <h3
-                        css-text='uppercase center bold 24_px'
-                        css-border='bottom_5_px bottom_solid bottom_light bottom_radius_5_px'
-                        css-width='100_%'
-                    >
-                        follow us on social media
-                    </h3>
-                    <ul
-                        css-list=''
-                        css-flex='justify_content_center align_items_center gap_1_rem'
-                        css-mobile-1450='flex_column'
-                    >
-                        ${media_options}
-                    </ul>
+                        <h3
+                            css-text='uppercase center bold 24_px poppins'
+                            css-border='bottom_5_px bottom_solid bottom_light bottom_radius_5_px'
+                            css-width='100_%'
+                        >
+                            следите за нами в социальных сетях
+                        </h3>
+                        <ul
+                            css-list=''
+                            css-flex='justify_content_center align_items_center gap_1_rem'
+                            css-mobile-1450='flex_column'
+                        >
+                            ${media_options}
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div
