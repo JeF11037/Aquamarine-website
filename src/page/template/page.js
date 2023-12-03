@@ -3,12 +3,10 @@ function getPageTemplate()
     return `
         <div class="cursor"></div>
         <header
-            css-flex='vertical'
+            css-flex=''
             css-width='100_%'
-            css-position='absolute'
-            css-z-index=''
-            css-gradient='shadow'
-            css-padding='1_rem'
+            css-height='12_rem'
+            css-z-index='top'
         ></header>
         <main
             css-flex='vertical'
