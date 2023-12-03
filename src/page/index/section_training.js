@@ -40,6 +40,7 @@ index_sections['training'] = `
                             >
                                 <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
                                 <a
+                                    href='#'
                                     css-flex='justify_content_center align_items_center'
                                 >
                                     <span>Узнать больше</span>${getIcon('right', ['fill_text_secondary', '25_px', '25_px'])}
@@ -60,6 +61,7 @@ index_sections['training'] = `
                             >
                                 <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
                                 <a
+                                    href='#'
                                     css-flex='justify_content_center align_items_center'
                                 >
                                     <span>Узнать больше</span>${getIcon('right', ['fill_text_secondary', '25_px', '25_px'])}
@@ -80,6 +82,7 @@ index_sections['training'] = `
                             >
                                 <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
                                 <a
+                                    href='#'
                                     css-flex='justify_content_center align_items_center'
                                 >
                                     <span>Узнать больше</span>${getIcon('right', ['fill_text_secondary', '25_px', '25_px'])}
@@ -100,6 +103,7 @@ index_sections['training'] = `
                             >
                                 <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
                                 <a
+                                    href='#'
                                     css-flex='justify_content_center align_items_center'
                                 >
                                     <span>Узнать больше</span>${getIcon('right', ['fill_text_secondary', '25_px', '25_px'])}

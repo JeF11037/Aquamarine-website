@@ -45,7 +45,7 @@ index_sections['coaches'] = `
                             <div
                                 data-trainer-links
                             >
-                                <a>подробнее</a>
+                                <a href='#'>подробнее</a>
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@ index_sections['coaches'] = `
                             <div
                                 data-trainer-links
                             >
-                                <a>подробнее</a>
+                                <a href='#'>подробнее</a>
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@ index_sections['coaches'] = `
                             <div
                                 data-trainer-links
                             >
-                                <a>подробнее</a>
+                                <a href='#'>подробнее</a>
                             </div>
                         </div>
                     </div>
@@ -126,7 +126,7 @@ index_sections['coaches'] = `
                             <div
                                 data-trainer-links
                             >
-                                <a>подробнее</a>
+                                <a href='#'>подробнее</a>
                             </div>
                         </div>
                     </div>
@@ -153,7 +153,7 @@ index_sections['coaches'] = `
                             <div
                                 data-trainer-links
                             >
-                                <a>подробнее</a>
+                                <a href='#'>подробнее</a>
                             </div>
                         </div>
                     </div>
@@ -180,7 +180,7 @@ index_sections['coaches'] = `
                             <div
                                 data-trainer-links
                             >
-                                <a>подробнее</a>
+                                <a href='#'>подробнее</a>
                             </div>
                         </div>
                     </div>

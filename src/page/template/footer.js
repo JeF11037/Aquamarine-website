@@ -16,16 +16,16 @@ function getFooterTemplate(language)
 
     const top_links =
     [
-        ['#', `home page`],
-        ['#', `about us`],
-        ['#', `training`],
-        ['#', `groups`],
-        ['#', `price`],
-        ['#', `registration`],
-        ['#', `competition calendar`],
-        ['#', `competition`],
-        ['#', `contact us`],
-        ['#', `our rules`],
+        ['index.html', `главная страница`],
+        ['about_us.html', `о нас`],
+        ['training.html', `тренировки`],
+        ['group.html', `выбрать группу`],
+        ['#', `прейскурант`],
+        ['#', `регистрация`],
+        ['#', `календарь соревнований`],
+        ['competition.html', `соревнования`],
+        ['contact_us.html', `контакт`],
+        ['#', `общие правила клуба`],
     ];
 
     const bottom_links =

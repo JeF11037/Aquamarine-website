@@ -1,4 +1,4 @@
-function getHeaderTemplate(language)
+function getHeaderTemplate(language, display = true)
 {
     const media = 
     [
@@ -8,18 +8,14 @@ function getHeaderTemplate(language)
         ['https://www.youtube.com/', getIcon('youtube', ['fill_text_counter', '3_rem', '3_rem'])]
     ];
 
-    const left_links = 
+    const links = 
     [
-        '',
-        '',
-        ''
-    ];
-
-    const right_links = 
-    [
-        '',
-        '',
-        ''
+        ['Главная страница', 'index.html'],
+        ['О нас', 'about_us.html'],
+        ['Тренировки', 'training.html'],
+        ['Выбрать группу', 'group.html'],
+        ['Соревнования', 'competition.html'],
+        ['Контакт', 'contact_us.html']
     ];
 
     let club_name = '';
@@ -47,87 +43,106 @@ function getHeaderTemplate(language)
         `;
     });
 
-    let left_link_options = '';
-    let right_link_options = '';
+    let link_options = '';
 
-    left_links.forEach(link => {
-        left_link_options += `
+    links.forEach(link => {
+        link_options += `
             <li
                 onmouseover='mouseOver()'
                 onmouseout='mouseOut()'
                 css-hoverable='text'
             >
-                ${link}
+                <a href='${link[1]}'>${link[0]}</a>
             </li>
         `;
     });
 
-    right_links.forEach(link => {
-        right_link_options += `
-            <li
-                onmouseover='mouseOver()'
-                onmouseout='mouseOut()'
-                css-hoverable='text'
-            >
-                ${link}
-            </li>
-        `;
+    if (!display)
+    {
+        document.querySelector('header').classList.add('display_none');
+        window.addEventListener('scroll', function() {
+            let header = document.querySelector('header');
+            if (window.scrollY >= 200)
+                header.classList.remove("display_none");
+            else
+                header.classList.add('display_none');
+        });
+    }
+    window.addEventListener('scroll', function() {
+        let header_section = document.querySelector('[data-header-section]');
+        if (window.scrollY >= 200)
+            header_section.classList.add('opacity_0');
+        else
+            header_section.classList.remove("opacity_0");
     });
-
     return `
-        <div
-            css-flex='content justify_content_center'
+        <section
+            css-flex=''
+            css-width='100_%'
+            css-height='100_%'
+            css-color='primary'
+            style='box-shadow: 0 0 10px black;'
+            data-header-section
         >
-            <ul
-                css-list=''
-                css-flex='align_items_center gap_2_rem justify_content_end'
-                css-color='text_counter'
-                css-text='acme uppercase 22_px 500'
-            >
-                ${left_link_options}
-            </ul>
             <div
                 css-flex='vertical'
-                css-margin='left_2_rem right_2_rem'
+                css-width='100_%'
+                css-z-index=''
+                css-padding='1_rem'
+                style="max-height: 200px";
             >
-                <span
-                    css-flex='justify_content_center'
-                    css-padding='top_2_rem'
+                <div
+                    css-flex='content'
                 >
-                    ${getLogo()}
-                </span>
-                <h1
-                    css-flex='justify_content_center'
-                    css-color='text'
-                    css-text='karla 44_px 800 center'
-                    class='header_club_name_container'
+                    <div
+                        css-flex='vertical'
+                        css-margin='right_10_rem'
+                    >
+                        <span
+                            css-flex='justify_content_center'
+                            css-padding='top_2_rem'
+                        >
+                            ${getLogo()}
+                        </span>
+                        <h1
+                            css-flex='justify_content_center'
+                            css-color='text'
+                            css-text='karla 44_px 800 center'
+                            class='header_club_name_container'
+                        >
+                            ${club_name}
+                        </h1>
+                        <p
+                            css-color='text_counter'
+                            css-text='poppins uppercase 20_px end'
+                        >
+                            sportclub
+                        </p>
+                    </div>
+                    <div
+                        css-flex='vertical align_items_center gap_2_rem justify_content_end'
+                    >
+                        <ul
+                            css-list=''
+                            css-flex='align_items_center gap_2_rem'
+                            css-color='text_counter'
+                            css-text='acme uppercase 22_px 500'
+                            style="white-space: nowrap; flex-wrap: wrap;"
+                        >
+                            ${link_options}
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class='temp_media'
                 >
-                    ${club_name}
-                </h1>
-                <p
-                    css-color='text_counter'
-                    css-text='poppins uppercase 20_px end'
-                >
-                    sportclub
-                </p>
+                    <ul
+                        css-flex='gap_1_rem'
+                    >
+                        ${media_options}
+                    </ul>
+                </div>
             </div>
-            <ul
-                css-list=''
-                css-flex='align_items_center gap_2_rem justify_content_baseline'
-                css-color='text_counter'
-                css-text='acme uppercase 22_px 500'
-            >
-                ${right_link_options}
-            </ul>
-        </div>
-        <div
-            class='temp_media'
-        >
-            <ul
-                css-flex='gap_1_rem'
-            >
-                ${media_options}
-            </ul>
-        </div>
+        </section>
     `;
 }

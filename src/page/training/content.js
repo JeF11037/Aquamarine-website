@@ -1,8 +1,7 @@
 function getTrainingContent(language)
 {
     return `
-        <div class='content'>
-        </div>
+        ${training_sections['index']}
     `
 }
 
